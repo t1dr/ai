@@ -1,0 +1,36 @@
+<!-- 
+"중국어 단어 '[咖啡]'를 사용하여, 중국어 예문을 만들어주세요. 그리고 해당 예문의 한국어 번역도 함께 제공해주세요. 예문은 HTML 소스로 작성해주시고, 형태소별로 span 태그를 사용하여 구분해주세요. 중국어와 한국어 형태소 간에 마우스 호버 시 배경색이 형광색으로 변하는 효과를 추가해주시고, 중국어는 불필요한 띄어쓰기 없이, 한국어는 자연스러운 띄어쓰기를 유지해주세요."
+ -->
+<html>
+<head>
+    <title>중국어 예문과 한국어 번역</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            function addHoverEffect(className) {
+                const elements = document.querySelectorAll('.' + className);
+                elements.forEach(element => {
+                    element.addEventListener('mouseover', () => {
+                        elements.forEach(el => el.style.backgroundColor = 'yellow');
+                    });
+                    element.addEventListener('mouseout', () => {
+                        elements.forEach(el => el.style.backgroundColor = '');
+                    });
+                });
+            }
+
+            ['word1', 'word2', 'word3', 'word4'].forEach(addHoverEffect);
+        });
+    </script>
+</head>
+<body>
+    <p class="sentence cn-sentence">
+        <span class="word1">我</span><span class="word2">每天</span><span class="word3">早上</span><span class="word4">喝咖啡。</span>
+    </p>
+    <p class="sentence kr-sentence">
+        <span class="word1">나는</span> 
+        <span class="word2">매일</span> 
+        <span class="word3">아침에</span> 
+        <span class="word4">커피를 마신다.</span>
+    </p>
+</body>
+</html>

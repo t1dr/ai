@@ -1,0 +1,48 @@
+<!-- 
+나:
+완벽하지 않지만 얼추 마음에 들어.
+앞으로 내가 너에게 중국어 단어 하나만 주면,
+이렇게 결과물을 만들어주려면 너한테 어떻게 요청하면 될까?
+프롬프트를 하나 작성해줘.
+
+ChatGPT:
+물론이죠. 앞으로 중국어 단어 하나를 주시면 HTML 소스로 예문과 번역을 만들어 드리는 요청을 하실 때 사용할 수 있는 프롬프트 예시입니다:
+
+"중국어 단어 '[咖啡]'를 사용하여, 중국어 예문을 만들어주세요. 그리고 해당 예문의 한국어 번역도 함께 제공해주세요. 예문은 HTML 소스로 작성해주시고, 형태소별로 span 태그를 사용하여 구분해주세요. 중국어와 한국어 형태소 간에 마우스 호버 시 배경색이 형광색으로 변하는 효과를 추가해주시고, 중국어는 불필요한 띄어쓰기 없이, 한국어는 자연스러운 띄어쓰기를 유지해주세요."
+
+이렇게 요청하시면 제가 중국어 단어를 기반으로 한 예문과 그에 대한 한국어 번역을 HTML 형식으로 제작하여 드리겠습니다.
+ -->
+<html>
+<head>
+    <title>중국어 예문과 한국어 번역</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            function addHoverEffect(className) {
+                const elements = document.querySelectorAll('.' + className);
+                elements.forEach(element => {
+                    element.addEventListener('mouseover', () => {
+                        elements.forEach(el => el.style.backgroundColor = 'yellow');
+                    });
+                    element.addEventListener('mouseout', () => {
+                        elements.forEach(el => el.style.backgroundColor = '');
+                    });
+                });
+            }
+
+            ['word1', 'word2', 'word3', 'word4', 'word5', 'word6'].forEach(addHoverEffect);
+        });
+    </script>
+</head>
+<body>
+    <p class="sentence cn-sentence">
+        <span class="word1">这个</span><span class="word2">城市</span><span class="word3">的</span><span class="word4">小吃</span><span class="word5">非常</span><span class="word6">有名</span>。
+    </p>
+    <p class="sentence kr-sentence">
+        <span class="word1">이</span> 
+        <span class="word2">도시</span><span class="word3">의</span> 
+        <span class="word4">길거리 음식은</span> 
+        <span class="word5">매우</span> 
+        <span class="word6">유명하다</span>.
+    </p>
+</body>
+</html>
