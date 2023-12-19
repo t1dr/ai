@@ -7,11 +7,28 @@
 </head>
 
 <body>
-    <div id="gameContainer">
-        <canvas id="gameCanvas"></canvas>
-        <div id="wordInputArea">
-            <input type="text" id="wordInput" placeholder="단어를 입력하세요">
-            <button id="submitWord">입력</button>
+    <div class="desktop">
+        <div class="window">
+            <div class="title-bar">
+                <span>My Window</span>
+                <div class="title-bar-buttons">
+                    <button class="title-bar-button">_</button>
+                    <button class="title-bar-button">X</button>
+                </div>
+            </div>
+            <!-- Window content -->
+            <div id="gameContainer">
+                <canvas id="gameCanvas"></canvas>
+                <div id="wordInputArea">
+                    <input type="text" id="wordInput" placeholder="단어를 입력하세요">
+                    <button id="submitWord">입력</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="taskbar">
+            <button class="start-button">Start</button>
+            <!-- Additional taskbar content -->
         </div>
     </div>
     <script src="game.js"></script>

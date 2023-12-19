@@ -1,7 +1,7 @@
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
-canvas.width = 1200;
-canvas.height = window.innerHeight;
+canvas.width = 2000;
+canvas.height = 1600;
 
 let words = ['安全', '不仅', '表扬', '表达', '安排', '博士', '本来', '抱歉', '不但', '安静']; // HSK 4급 수준의 중국어 단어
 // let words = ['단어1', '단어2', '단어3', '단어4', '단어5', '단어6', '단어7', '단어8', '단어9', '단어10']; // HSK 4급 수준의 중국어 단어로 대체
@@ -64,15 +64,15 @@ function updateGame() {
 
   // 점수와 목숨 표시
   ctx.fillStyle = 'black'; // 텍스트 색상
-  ctx.font = '20px Arial'; // 텍스트 폰트
-  ctx.fillText(`점수: ${score}`, 10, 30); // 왼쪽 상단에 점수 표시
-  ctx.fillText(`목숨: ${lives}`, canvas.width - 100, 30); // 오른쪽 상단에 목숨 표시
+  ctx.font = '70px Arial'; // 텍스트 폰트
+  ctx.fillText(`Score: ${score}`, 50, 100); // 왼쪽 상단에 점수 표시
+  ctx.fillText(`Life: ${lives}`, canvas.width - 280, 100); // 오른쪽 상단에 목숨 표시
 
   // 단어의 스타일 설정
-  ctx.fillStyle = 'white'; // 텍스트 색상을 흰색으로 설정
-  ctx.strokeStyle = 'black'; // 텍스트 테두리 색상을 검은색으로 설정
-  ctx.lineWidth = 2; // 테두리 두께
-  ctx.font = '24px Arial'; // 글자 크기를 24픽셀로 설정
+  ctx.font = '50px Arial'; // Increase font size
+  ctx.fillStyle = 'white'; // White color for snow effect
+  ctx.shadowColor = 'lightblue'; // Light blue shadow for icy effect
+  ctx.shadowBlur = 5; // Shadow blur to enhance the icy effect
   
 
   for (let i = 0; i < fallingWords.length; i++) {
