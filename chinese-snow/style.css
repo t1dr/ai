@@ -45,9 +45,10 @@ canvas {
 
 #wordInputArea {
   position: absolute;
-  bottom: 0; /* 캔버스의 하단에 위치 */
-  left: 0;
-  right: 0; /* 캔버스의 너비에 맞춤 */
+  border-radius: .5rem;
+  width: 33.33%;
+  bottom: 1rem; /* 캔버스의 하단에 위치 */
+  left: 33.33%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -113,8 +114,10 @@ canvas {
   display: flex;
 }
 .title-bar-button {
-  width: 18px;
-  height: 18px;
+  text-align: center;
+  font-size: .8rem;
+  width: 1.6rem;
+  height: 1.2rem;
   margin-left: 2px;
   border: 1px solid black;
   color: black;
